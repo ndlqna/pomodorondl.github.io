@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Học Cùng Tôi Nhé </h1>
+    <div class="clock" id="clock">--:--:--</div>
+
+    <label for="timeSelect">Thiết Lập Thời Gian:</label>
+    <select id="timeSelect">
+      <option value="5">5 phút</option>
+      <option value="10">10 phút</option>
+      <option value="15">15 phút</option>
+      <option value="20">20 phút</option>
+      <option value="25" selected>25 phút</option>
+      <option value="30">30 phút</option>
+      <option value="45">45 phút</option>
+      <option value="60">60 phút</option>
+    </select>
+
+    <div class="timer-container">
+      <svg class="timer-svg" width="150" height="150">
+        <circle class="timer-circle" cx="75" cy="75" r="70"></circle>
+        <circle class="timer-progress" cx="75" cy="75" r="70"></circle>
+      </svg>
+      <div class="timer" id="timer">25:00</div>
+    </div>
+
+    <div class="sessions" id="sessions">Phiên Hoàn Thành: 0</div>
+
+    <div class="button-group">
+      <button id="startBtn">Bắt Đầu</button>
+      <button id="pauseBtn" disabled>Tạm Dừng</button>
+      <button id="resetBtn" disabled>Đặt Lại</button>
+      <button id="resetSessionsBtn">Đặt Lại Phiên Hoàn Thành</button>
+      <!-- <button id="muteMusicBtn">Tắt Nhạc</button> -->
+    </div>
+
+    <audio id="lofiMusic" loop>
+      <source src="lofi.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+   <script src="code.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+body {
+    background-image: url('1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+    margin: 2rem 2rem;
+}
+
+.clock {
+    font-size: 2em;
+    margin: 1rem 0;
+}
+
+.timer-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 1rem auto;
+}
+
+.timer-svg {
+    transform: rotate(-90deg);
+}
+
+.timer-circle {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 10;
+}
+
+.timer-progress {
+    fill: none;
+    stroke: #60cdee;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transition: stroke-dashoffset 0.3s linear;
+}
+
+.timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+}
+
+.sessions {
+    font-size: 1em;
+    margin: 1rem 0;
+    color: #555;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+button {
+    background-color: #60cdee;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+select {
+    font-size: 1em;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+audio {
+    display: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    body {
+        background-size: 100% auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    body {
+        background-size: auto 100%;
+    }
+}
